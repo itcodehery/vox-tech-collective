@@ -1,0 +1,140 @@
+
+hr {
+    width: 30%;
+    color: rgba(255, 255, 255, 0.111);
+}
+
+select {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 8px 16px;
+    border: rgba(106, 142, 35, 0.448) 1px solid;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: rgba(40, 53, 0, 0.5);
+    color: #deeab8;
+    font-family: 'SF Pro Display';
+    font-weight: 600px;
+    transition: border 0.5s ease-in-out;
+    box-shadow: 0 2px 4px rgba(164, 198, 84, 0.15);
+}
+
+select::-ms-expand {
+    display: none;
+    background-color: transparent;
+}
+
+select option {
+    background-color: rgba(40, 53, 0, 0.5);
+    color: #deeab8;
+}
+
+body {
+    background-color: #081500;
+    color: #deeab8;
+    font-family: 'SF Pro Display';
+    font-weight: 600px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/* make the h1 tag have a green highlight */
+h3 {
+    display: inline-block;
+    background-color: rgba(40, 53, 0, 0.5);
+    background-size: contain;
+    border: none;
+    border-radius: 10px;
+    color: #b3e02b;
+    font-family: 'SF Pro Display';
+    font-weight: 600px;
+    padding: 8px 16px;
+    margin-bottom: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* format the form tag with good gaps and padding*/
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+}
+
+.form-pad{
+    padding: 50px 380px ;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    color: #deeab8;
+}
+
+/* format the input tags with good gaps and padding*/
+input {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 8px 16px;
+    border: rgba(106, 142, 35, 0.448) 1px solid;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: rgba(40, 53, 0, 0.5);
+    color: #deeab8;
+    font-family: 'SF Pro Display';
+    font-weight: 600px;
+    box-shadow: 0 2px 4px rgba(164, 198, 84, 0.15);
+    transition: border 0.5s ease-in-out;
+}
+
+input:focus {
+    outline: none;
+    border: #b3e02b4d 2px solid;
+}
+
+label {
+    font-weight: bold;
+}
+
+.secondary-text {
+    font-family: 'SF Pro Display';
+    color: #deeab8;
+    font-size: 14px;
+    padding: none;
+}
+
+.tertiary-text {
+    font-family: 'SF Pro Display';
+    color: #deeab8;
+    font-size: 14px;
+    margin: none;
+    font-weight: normal;
+    margin-top: -1%;
+    padding: none;
+}
+
+.form-submit-button {
+    background-color: rgba(191, 255, 0, 0.65);
+    color: #1c3700;
+    text-transform: capitalize;
+    font-family: 'SF Pro Display';
+    font-weight: bold;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: sticky;
+    float: right;
+    box-shadow: 0 2px 4px rgba(164, 198, 84, 0.15);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.form-submit-button:hover {
+    background-color: #1c3700;
+    color:rgba(191, 255, 0, 0.85);
+}
