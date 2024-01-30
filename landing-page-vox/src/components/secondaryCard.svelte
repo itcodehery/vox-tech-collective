@@ -24,9 +24,22 @@
         font-size: 32px;
     }
 
+    @media screen and (max-width: 600px) {
+        .secondary-card {
+            padding: 32px;
+            flex-direction: column;
+        }
+        
+        .secondary-card h1 {
+            font-size: 24px;
+        }
+    }
+
     .secondary-card p {
         word-wrap: break-word;
         max-width: 400px;
+        font-kerning: normal;
+        color: rgb(206, 227, 143);
     }
 </style>
 <div class="secondary-card">
@@ -37,5 +50,4 @@
     <div>
         <img src={logo} alt="logo" width="140px" height="140px"/>
     </div>
-    
 </div>

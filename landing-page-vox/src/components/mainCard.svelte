@@ -7,9 +7,6 @@
 </script>
 <style>
     .main-card {
-
-        /*the line below makes the background image as logo-opac.png */
-        /* background-image: linear-gradient(45deg, #c4ff11, rgb(107, 174, 0)); */
         background-color: #B3E02B;
         background-image: url('../lib/images/primaryCardbg.png');
         background-size: cover;
@@ -21,6 +18,7 @@
         flex-direction: column;
         border-radius: 8px;
     }
+    
 
     .main-card h1 {
         margin: 0;
@@ -28,16 +26,33 @@
         font-weight: bold;
     }
 
+    @media screen and (max-width: 600px) {
+        .main-card {
+            padding: 32px;
+            align-items: center;
+        }
+
+        .main-card h1 {
+            font-size: 24px;
+        }
+
+        .main-card p {
+            font-size: 10px;
+        }
+    }
+
     .main-card p {
         color: #134700;
-        font-size: medium;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 10px;
     }
 
     .main-card button {
     background-color: rgb(46, 60, 0);
     color: #B3E02B;
     text-transform: capitalize;
-    font-family: 'SF Pro Display';
+    font-family: 'Clash Display';
     font-weight: bold;
     padding: 8px 32px;
     border: none;
@@ -53,8 +68,19 @@
     color: #222d00;
   }
 </style>
-<div class="main-card">
-    <h1>{mainText}</h1>
-    <p>{subText}</p>
-    <button on:click={joinUsClick} target="_blank">Join Us</button>
-</div>
+
+<!-- if its a mobile screen, render this on the screen -->
+{#if window.innerWidth < 600}
+    <div class="main-card">
+        <h1>{mainText}</h1>
+        <p>{subText}</p>
+        <button on:click={joinUsClick}>Join Us</button>
+    </div>
+{:else}
+    <div class="main-card">
+        <h1>{mainText}</h1>
+        <p>{subText}</p>
+        <button on:click={joinUsClick}>Join Us</button>
+    </div>
+{/if}
+

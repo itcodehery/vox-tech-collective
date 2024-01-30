@@ -1,6 +1,5 @@
 <script>
 import AppBar from "../../components/AppBar.svelte";
-import Footer from "../../components/footer.svelte";
 let name = "world";
 export let contacts = [{
         image: "https://avatars.githubusercontent.com/u/129949346?v=4",
@@ -14,27 +13,27 @@ export let contacts = [{
         fullname: "Vaibhav Kumaar Murugendra",
         email: "vaibhavmurugendra@gmail.com"
     }];
- let members = [{
+
+    let curators = [{
+        image: "https://avatars.githubusercontent.com/u/129949346?v=4",
+        name: "Tamanna",
+        fullname: "Tamanna Billuraj",
+        email: "tamannabilluraj@gmail.com"
+    },
+    {
         image: "https://avatars.githubusercontent.com/u/120126451?v=4",
         name: "Aditya",
         fullname: "Aditya Salgundi",
-        email: "adityasalgundi@gmail.com"
-}, 
-    {
-        image: "https://avatars.githubusercontent.com/u/84909648?v=4",
-        name: "Kevin",
-        fullname: "Kevin S",
-        email: "kevins@gmail.com"
+        email: "adityasalgundi7@gmail.com"
     }
-];
+    ]
 </script>
 
 <style>
 @import '../../font-import.css';
 
-hr {
-    width: 30%;
-    color: rgba(255, 255, 255, 0.111);
+body {
+    padding: 20px;
 }
 
 body h1 {
@@ -53,6 +52,8 @@ body h1 {
     padding: 40px;
     display: flex;
     align-items: center;
+    align-self: center;
+    justify-content: center;
     flex-direction: row;
     flex-shrink: inherit;
     width: clamp(200px, 50%, 600px);
@@ -60,8 +61,8 @@ body h1 {
 }
 
 .g {
-    background-color: #fff;
-    color: black;
+    background-color: #ffffff13;
+    color: white;
     padding: 4px 20px;
     display: block;
     border-radius: 8px;
@@ -80,18 +81,60 @@ body img {
 
 body a {
     padding-bottom: 20vb;
+    gap: 20px;
+    color: #9dcd5f;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        background-color: transparent;
+        color: #fff;
+        align-self: center;
+        justify-self: center;
+        gap: 20px;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-shrink: inherit;
+        width: clamp(200px, 50%, 600px);
+        border-radius: 8px;
+    }
+
+    .g {
+        background-color: #ffffff13;
+        color: white;
+        padding: 4px 20px;
+        display: block;
+        border-radius: 8px;
+        width: clamp(240px, 0%, 500px);
+    }
+    body img {
+        width:240px; 
+        padding-top: 14px; 
+        align-self: center;
+        justify-self: center; 
+        border-radius: 8px;
+    }
+
+    body a {
+        padding-bottom: 20vb;
+        gap: 20px;
+        color: #9dcd5f;
+    }
 }
 </style>
 
 <body>
-    <AppBar bind:search="{name}"/>
-        <div style="height: 65px;">
-
+    <AppBar formAppBar="{true}"/>
+        <div style="height: 60px;">
         </div>
         <h1 style="font-size: 36px;">Contact Us</h1>
-        <hr/>
-        <h1 class="sub-heading">Founders</h1>
-        <div class="container"> 
+        <section>
+            <h2 class="sub-heading">Founders</h2>
+            <div class="container"> 
             {#each contacts as contact}
             <div class="g">
                 <img src={contact.image} alt="Avatar">
@@ -102,31 +145,21 @@ body a {
             </div>
             {/each}
         </div>
-        <hr/>
-        <h1 class="sub-heading">Curators</h1>
+        <div style="height=10;"/>
+        </section>
+        <section>
+            <h2 class="sub-heading">Curators</h2>
         <div class="container"> 
+            {#each curators as curator}
             <div class="g">
-                <img src="https://avatars.githubusercontent.com/u/129949346?v=4" alt="Avatar">
-                <h2>Tamanna</h2>
-                <p style="font-style: italic; color:gray">Tamanna Billuraj</p>
-                <a href="mailto:tamannabilluraj@gmail.com">tamannabilluraj@gmail.com</a>
-                <p></p>
-            </div>
-        </div>
-        <hr/>
-        <h1 class="sub-heading">Members</h1>
-        <div class="container"> 
-            {#each members as member}
-            <div class="g">
-                <img src={member.image} alt="Avatar">
-                <h2>{member.name}</h2>
-                <p style="font-style: italic; color:gray">{member.fullname}</p>
-                <a href="mailto:{member.email}">{member.email}</a>
+                <img src={curator.image} alt="Avatar">
+                <h2>{curator.name}</h2>
+                <p style="font-style: italic; color:gray">{curator.fullname}</p>
+                <a href="mailto:{curator.email}">{curator.email}</a>
                 <p></p>
             </div>
             {/each}
         </div>
-            </body>
-            <footer>
-                <Footer/>
-            </footer>
+        <div style="height=10;"/>
+        </section>
+</body>

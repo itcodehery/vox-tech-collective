@@ -2,6 +2,7 @@
     //export form data to a json file
     import { onMount } from 'svelte';
     import { page } from '$app/stores';
+    import AppBar from '../../components/AppBar.svelte';
 
     onMount(() => {
         const form = document.querySelector('form');
@@ -76,12 +77,10 @@
 <style>
     @import '../../font-import.css';
     @import '../recruitment-form/form.css';
-
-    p{
-        margin: 0%;
-        color: #deeab8cf;
-    }
 </style>
+<header>
+    <AppBar showNameBar={false} showJoinUsButton={false} />
+</header>
 
 <body>
     <div style="height: 50px"></div>

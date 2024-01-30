@@ -23,9 +23,32 @@
         font-size: 32px;
     }
 
+    @media screen and (max-width: 600px) {
+        .tertiary-card {
+            padding: 32px;
+            flex-direction: column;
+        }
+        
+        .tertiary-card h1 {
+            font-size: 24px;
+        }
+
+        .tertiary-card .image {
+            display: none;
+            opacity: 0;
+        }
+    }
+
     .tertiary-card p {
         word-wrap: break-word;
         max-width: 400px;
+        color: rgb(206, 227, 143);
+    }
+
+    .tertiary-card .image {
+        /* make the image resize by width */
+        width: min-content;
+        height: min-content;
     }
 </style>
 <div class="tertiary-card">
@@ -33,8 +56,7 @@
         <h1>{mainText}</h1>
         <p>{subText}</p>
     </div>
-    <div>
+    <div class="image">
         <img src="{header}" alt="logo" width="555px" height="222px"/>
     </div>
-    
 </div>

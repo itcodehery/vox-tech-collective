@@ -1,30 +1,36 @@
 @font-face {
-    font-family: 'SF Pro Display';
-    src: url('fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-family: 'Clash Display';
+    src: url('fonts/ClashDisplay-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'SF Pro Display';
-    src: url('fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+    font-family: 'Clash Display';
+    src: url('fonts/ClashDisplay-Medium.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'SF Pro Display';
-    src: url('fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
-    font-weight: 600;
+    font-family: 'Clash Display';
+    src: url('fonts/ClashDisplay-Light.otf') format('opentype');
+    font-weight: 100;
     font-style: normal;
 }
 
 body {
     background-color:black;
     color: aliceblue;
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: 'Clash Display', sans-serif;
     font-kerning: auto;
     padding: 0;
     align-self: center;
     align-items: center;
+}
+
+.section-gap{
+    height: 10px;
+    width: 100%;
+    align-self: center;
 }
