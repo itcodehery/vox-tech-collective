@@ -9,6 +9,7 @@
     }
 </script>
 <style>
+    @import '../font-import.css';
     /* if its a web screen use this style */
     .app-bar {
         position: fixed;
@@ -61,7 +62,7 @@
     /* if its a mobile screen, use this */
     @media screen and (max-width: 600px) {
         .app-bar {
-            width: 60%;
+            width: 80%;
             height: 18px;
             padding: 16px;
             display: none;
@@ -73,7 +74,7 @@
         }
 
         .app-bar-2 {
-            width: 60%;
+            width: 80%;
             height: 18px;
             padding: 16px;
             display: flex;
@@ -103,8 +104,8 @@
     text-transform: capitalize;
     font-weight: bold;
     padding: 8px 16px;
-    font-family: 'Clash Display';
-    font-size: medium;
+    font-family: 'Raleway';
+    font-size: bold;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -117,8 +118,6 @@
     background-color: rgba(40, 53, 0, 0.5);
     color: #87aa1d;
     text-transform: capitalize;
-    font-family: 'Clash Display';
-    font-weight: 600px;
     padding: 8px 16px;
     border: none;
     height: 20px;
@@ -132,9 +131,9 @@
     background-color: transparent;
     color: #b3e02b;
     text-transform: capitalize;
-    font-family: 'Clash Display';
-    font-weight: 600px;
-    font-size: medium;
+    font-size: small;
+    font-weight: normal;
+    font-family: 'Raleway';
     padding: 8px 16px;
     border: none;
     border-radius: 4px;
@@ -168,7 +167,7 @@
     <div class = "container">
         <a href="/contact/"><button class="secondary-button">Contact</button></a>
         {#if showJoinUsButton==true}
-        <a href="/recruitment-form"><button class="primary-button">Join Us</button></a>
+        <button class="primary-button" on:click={joinUsClick}>Join Us</button>
         {/if}
     </div>
     {:else}
@@ -185,6 +184,6 @@
         <a href="/"><img src="{logo}" href= "/" alt="logo" width="42px" height="42px"/></a>
     </div>
     {#if showJoinUsButton==true}
-        <a href="/recruitment-form"><button class="primary-button">Join Us</button></a>
+        <button class="primary-button" on:click={joinUsClick}>Join Us</button>
     {/if}
 </header>

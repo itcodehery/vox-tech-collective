@@ -7,43 +7,57 @@
 </script>
 <style>
     .main-card {
-        background-color: #B3E02B;
+        background-color: #aed340;
         background-image: url('../lib/images/primaryCardbg.png');
         background-size: cover;
-        color: #000;
+        color: #111111;
         align-self: center;
         padding: 112px;
         display: flex;
         align-items: center;
         flex-direction: column;
         border-radius: 8px;
+        text-align: center;
     }
     
 
     .main-card h1 {
         margin: 0;
-        font-size: 42px;
+        padding-bottom: 0px;
+        font-size: 36px;
+        letter-spacing: -0.3px;
         font-weight: bold;
+        
     }
 
     @media screen and (max-width: 600px) {
         .main-card {
             padding: 32px;
             align-items: center;
+            background-color: #aed340;
+            background-image: url('../lib/images/primaryCardbg.png');
+            background-size: cover;
+            color: #000;
+            align-self: center;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 8px;
         }
 
         .main-card h1 {
-            font-size: 24px;
+            font-size: 20px;
         }
 
         .main-card p {
-            font-size: 10px;
+            font-size: 6px;
         }
     }
 
     .main-card p {
         color: #134700;
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 500;
         margin-bottom: 10px;
     }
@@ -51,13 +65,13 @@
     .main-card button {
     background-color: rgb(46, 60, 0);
     color: #B3E02B;
-    text-transform: capitalize;
-    font-family: 'Clash Display';
     font-weight: bold;
+    letter-spacing: -0.3px;
     padding: 8px 32px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   .main-card button:hover {

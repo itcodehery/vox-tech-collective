@@ -18,7 +18,7 @@ export let contacts = [{
         image: "https://avatars.githubusercontent.com/u/129949346?v=4",
         name: "Tamanna",
         fullname: "Tamanna Billuraj",
-        email: "tamannabilluraj@gmail.com"
+        email: "tamannabilluraj1564@gmail.com"
     },
     {
         image: "https://avatars.githubusercontent.com/u/120126451?v=4",

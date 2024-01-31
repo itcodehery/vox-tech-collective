@@ -8,13 +8,6 @@ let name = "World";
 
 <style>
 @import '../font-import.css';
-
-body {
-    background-image: url('../lib/images/BG.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 </style>
 <header>
     <AppBar showNameBar="{true}" bind:search={name}/>
