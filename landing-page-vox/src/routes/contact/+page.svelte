@@ -1,11 +1,11 @@
 <script>
 import AppBar from "../../components/AppBar.svelte";
-let name = "world";
 export let contacts = [{
         image: "https://avatars.githubusercontent.com/u/129949346?v=4",
         name: "Hari",
         fullname: "Hari Prasad",
-        email: "haririo321@gmail.com"
+        email: "haririo321@gmail.com",
+        link: "linktr.ee/itwritshery"
     },
     {
         image: "https://avatars.githubusercontent.com/u/84909648?v=4",
@@ -15,18 +15,20 @@ export let contacts = [{
     }];
 
     let curators = [{
-        image: "https://avatars.githubusercontent.com/u/129949346?v=4",
         name: "Tamanna",
         fullname: "Tamanna Billuraj",
         email: "tamannabilluraj1564@gmail.com"
     },
     {
-        image: "https://avatars.githubusercontent.com/u/120126451?v=4",
         name: "Aditya",
         fullname: "Aditya Salgundi",
         email: "adityasalgundi7@gmail.com"
     }
-    ]
+    ];
+
+    function linkClick(link) {
+        window.open("https://" + link, "_blank");
+    }
 </script>
 
 <style>
@@ -43,16 +45,19 @@ body h1 {
     align-content: center;
 }
 
+section {
+    padding: 40px;
+    gap: 20px;
+}
+
 .container {
     background-color: transparent;
     color: #fff;
     align-self: center;
     justify-self: center;
     gap: 20px;
-    padding: 40px;
     display: flex;
     align-items: center;
-    align-self: center;
     justify-content: center;
     flex-direction: row;
     flex-shrink: inherit;
@@ -85,6 +90,38 @@ body a {
     color: #9dcd5f;
 }
 
+    .linktree {
+        background-color: rgb(46, 60, 0);
+        color: #B3E02B;
+        font-weight: bold;
+        letter-spacing: 2px;
+        height: 22px;
+        padding: 4px 14px;
+        border: none;
+        border-radius: 4px;
+    }
+
+    .linktree:hover {
+        background-color: rgb(22, 28, 0);
+        color: #B3E02B;
+        font-weight: bold;
+        letter-spacing: 2px;
+        min-height: 10px;
+        height: 22px;
+        padding: 4px 14px;
+        border: none;
+        border-radius: 4px;
+    }
+
+    .nameRow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: center;
+        justify-content: space-between;
+        margin: 0px;
+    }
+    
 @media screen and (max-width: 600px) {
     .container {
         background-color: transparent;
@@ -92,15 +129,20 @@ body a {
         align-self: center;
         justify-self: center;
         gap: 20px;
-        padding: 40px;
         display: flex;
         align-items: center;
+        text-align: center;
         align-self: center;
         justify-content: center;
         flex-direction: column;
         flex-shrink: inherit;
         width: clamp(200px, 50%, 600px);
         border-radius: 8px;
+    }
+
+    section {
+        padding: 20px;
+        gap: 20px;
     }
 
     .g {
@@ -138,9 +180,16 @@ body a {
             {#each contacts as contact}
             <div class="g">
                 <img src={contact.image} alt="Avatar">
-                <h2>{contact.name}</h2>
+                <div class="nameRow">
+                    <h2>{contact.name}</h2>
+                    {#if contact.link}
+                    <div style="height=20;"/>
+                    <button class="linktree" on:click={linkClick(contact.link)}>LINKTREE</button>
+                    {/if}
+                </div>
                 <p style="font-style: italic; color:gray">{contact.fullname}</p>
-                <a href="{contact.email}">{contact.email}</a>
+                <a href="mailto:{contact.email}">{contact.email}</a>
+                
                 <p></p>
             </div>
             {/each}
@@ -152,7 +201,7 @@ body a {
         <div class="container"> 
             {#each curators as curator}
             <div class="g">
-                <img src={curator.image} alt="Avatar">
+                <!-- <img src="{}" alt="Avatar"> -->
                 <h2>{curator.name}</h2>
                 <p style="font-style: italic; color:gray">{curator.fullname}</p>
                 <a href="mailto:{curator.email}">{curator.email}</a>

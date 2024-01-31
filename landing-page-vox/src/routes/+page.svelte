@@ -1,14 +1,15 @@
 <script>
     import AppBar from "../components/AppBar.svelte";
-import MainCard from "../components/mainCard.svelte";
-import SecondaryCard from "../components/secondaryCard.svelte";
-import TertiaryCard from "../components/tertiaryCard.svelte";
-let name = "World";
+    import MainCard from "../components/mainCard.svelte";
+    import SecondaryCard from "../components/secondaryCard.svelte";
+    import TertiaryCard from "../components/tertiaryCard.svelte";
+    let name = "World";
 </script>
 
 <style>
 @import '../font-import.css';
 </style>
+
 <header>
     <AppBar showNameBar="{true}" bind:search={name}/>
 </header>

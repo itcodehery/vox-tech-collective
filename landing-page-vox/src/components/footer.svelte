@@ -77,6 +77,9 @@
         {#each routes as route}
             {#if route.name === 'Join Us'}
                 <button on:click={joinUsClick}>Join Us</button>
+            {:else if route.name === 'Products'}
+                <!-- make an alert -->
+                <button on:click={() => alert('Vox Technologia is a relatively young initiative.\nWait some time to see products from us.')}>{route.name}</button>
             {:else}
                 <button on:click={() => navigateTo(route.path)}>{route.name}</button>
             {/if}

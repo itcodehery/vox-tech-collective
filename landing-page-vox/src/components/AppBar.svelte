@@ -58,6 +58,13 @@
         border: #d4ea9948 1px solid;
         /* z-index: 1; */
     }
+
+    .container-three {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+  }
     
     /* if its a mobile screen, use this */
     @media screen and (max-width: 600px) {
@@ -171,8 +178,9 @@
         {/if}
     </div>
     {:else}
-    <div class="container-two">
+    <div class="container-three">
         <a href="/"><img src="{logo}" href= "/" alt="logo" width="42px" height="42px"/></a>
+        <p>The Vox Technologia Collective</p>
     </div>
     {/if}
 

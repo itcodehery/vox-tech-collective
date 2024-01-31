@@ -71,13 +71,13 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 0.3s ease-in;
   }
 
   .main-card button:hover {
     background-color: transparent;
     border: #222d00 2px solid;
-    padding: 6.5px 30px;
+    padding: 6.3px 30px;
     border-style: dashed;
     color: #222d00;
   }
