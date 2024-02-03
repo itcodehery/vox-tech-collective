@@ -40,13 +40,17 @@
     }
 
     .footer-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: .5em;
+        max-width: fit-content;
         margin-bottom: 10px;
         background-color: transparent;
         color: #c9ff82;
     }
 
     .footer-buttons button {
-        margin-right: 10px;
         background-color: transparent;
         color: #d3fd9d;
         padding: 8px 16px;
@@ -56,14 +60,13 @@
         font-family: 'Raleway';
         font-weight: bold;
         cursor: pointer;
-        font-weight: normal;
-        transition: background-color 0.3s ease-in;
+        font-weight: bold;
+        transition: background-color 0.150s ease-in, color 0.150s ease-in;
     }
 
     .footer-buttons button:hover {
         background-color: #c9ff82;
         color: #557b23;
-        font-weight: bold;
     }
 </style>
 
