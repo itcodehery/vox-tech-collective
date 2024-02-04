@@ -42,12 +42,16 @@
     .footer-buttons {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        gap: .5em;
-        max-width: fit-content;
+        justify-content: start;
         margin-bottom: 10px;
         background-color: transparent;
         color: #c9ff82;
+    }
+
+    @media (max-width: 600px) {
+        .footer-buttons {
+            flex-wrap: wrap;
+        }
     }
 
     .footer-buttons button {
