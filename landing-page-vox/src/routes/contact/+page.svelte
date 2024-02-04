@@ -99,6 +99,8 @@ body a {
         padding: 4px 14px;
         border: none;
         border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in;
     }
 
     .linktree:hover {

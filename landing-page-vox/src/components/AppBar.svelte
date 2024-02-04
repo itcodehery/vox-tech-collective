@@ -63,7 +63,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: space-between;
   }
     
     /* if its a mobile screen, use this */
@@ -180,7 +179,9 @@
     {:else}
     <div class="container-three">
         <a href="/"><img src="{logo}" href= "/" alt="logo" width="42px" height="42px"/></a>
-        <p>The Vox Technologia Collective</p>
+        {#if showJoinUsButton==true}
+        <button class="primary-button" on:click={joinUsClick}>Join Us</button>
+        {/if}
     </div>
     {/if}
 
