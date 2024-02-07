@@ -5,8 +5,8 @@
     const structureScript = "Since the collective is community-driven, there is no thing as a leader or a manager. We hold discussions and meetings on things that we could do within the community. Currently we have something called Skill evaluation events going on where we do individual projects and showcase them to each other. Soon, we're planning on starting small scale projects that our community members would form teams and complete.";
     const futureScript = "We're looking to expand our community to other colleges and universities in Bangalore and eventually to other cities in India. We're also looking to collaborate with other tech communities and organizations to host events and workshops. In the future, we might move into freelancing and internships for our community members. We're looking for moderators and community managers to help us with the expansion. If you are interested in that, you can apply via the form link below.";
 
-    function navigateTo(path) {
-        goto(path);
+    function joinUsClick() {
+        window.open('https://tally.so/r/meeq4e', '_blank');
     }
 </script>
 
@@ -67,7 +67,7 @@
         <h1>What's the future?</h1>
         <p>{futureScript}</p>
         <div class="section-gap"/>
-        <button on:click={() => navigateTo("https://tally.so/r/meeq4e")}>Moderation Application Form</button>
+        <button on:click={joinUsClick}>Moderation Application Form</button>
     </section>
 </body>
 
