@@ -36,6 +36,7 @@ export let contacts = [{
 
 body {
     padding: 20px;
+    background-color: #0d1003;
 }
 
 body h1 {

@@ -5,6 +5,7 @@
         { name: 'Home', path: '/' },
         { name: 'Contact', path: '/contact' },
         { name: 'Products', path: '/products'},
+        { name: 'About', path: '/about'},
         { name: 'Join Us', path: '/recruitment-form'},
     ];
 
@@ -27,14 +28,17 @@
         letter-spacing: -0.3px;
         padding: 20px;
         border-radius: 8px;
-        text-align: left;
-        align-self: flex-end;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
     }
 
     .head {
         display: flex;
         flex-direction: row;
-        justify-content: start;
+        justify-content: center;
+        align-self: center;
         align-items: center;
         color: #c9ff82;
     }
@@ -42,7 +46,9 @@
     .footer-buttons {
         display: flex;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
         margin-bottom: 10px;
         background-color: transparent;
         color: #c9ff82;

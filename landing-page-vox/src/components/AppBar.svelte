@@ -1,7 +1,5 @@
 <script>
     import logo from '../lib/images/logo.png';
-    export let search;
-    export let showNameBar = false;
     export let showJoinUsButton = true;
     export let formAppBar = false;
     function joinUsClick() {
@@ -120,18 +118,6 @@
     transition: background-color 0.3s ease-in-out;
   }
 
-  .inputbar {
-    background-color: rgba(40, 53, 0, 0.5);
-    color: #87aa1d;
-    text-transform: capitalize;
-    padding: 8px 16px;
-    border: none;
-    height: 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    /* width: 100%; */
-  }
-
   .secondary-button {
     margin-left: auto;
     background-color: transparent;
@@ -159,32 +145,18 @@
   }
 </style>
 
-<!-- if its a mobile screen, use this -->
-
 <header class="app-bar">
-    {#if !formAppBar}
     <div class="container">
         <!-- add link to home page to the image using <a> tag -->
         <a href="/"><img src="{logo}" href= "/" alt="logo" width="42px" height="42px"/></a>
-        {#if showNameBar==true}
-        <input class= "inputbar" bind:value = {search} type="text" placeholder="Enter your Name" />
-        {/if}
     </div>
     <div class = "container">
         <a href="/contact/"><button class="secondary-button">Contact</button></a>
+        <a href="/about/"><button class="secondary-button">About</button></a>
         {#if showJoinUsButton==true}
         <button class="primary-button" on:click={joinUsClick}>Join Us</button>
         {/if}
     </div>
-    {:else}
-    <div class="container-three">
-        <a href="/"><img src="{logo}" href= "/" alt="logo" width="42px" height="42px"/></a>
-        {#if showJoinUsButton==true}
-        <button class="primary-button" on:click={joinUsClick}>Join Us</button>
-        {/if}
-    </div>
-    {/if}
-
 </header>
 
 <header class="app-bar-2">

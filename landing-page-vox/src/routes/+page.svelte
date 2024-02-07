@@ -3,7 +3,6 @@
     import MainCard from "../components/mainCard.svelte";
     import SecondaryCard from "../components/secondaryCard.svelte";
     import TertiaryCard from "../components/tertiaryCard.svelte";
-    let name = "World";
 </script>
 
 <style>
@@ -11,7 +10,7 @@
 </style>
 
 <header>
-    <AppBar showNameBar="{true}" bind:search={name}/>
+    <AppBar showNameBar="{true}"/>
 </header>
 
 <body>
@@ -20,7 +19,7 @@
     <section>
         <div class="section-gap"/>
     <MainCard
-        mainText="👋 Hello {name}! We are the Vox Technologia Collective"
+        mainText="👋 Hello! We are the Vox Technologia Collective"
         subText="A coder community of college students based in Bangalore, India!"/>
         <div class="section-gap"/>
     </section>
