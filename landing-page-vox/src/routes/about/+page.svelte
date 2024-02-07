@@ -29,6 +29,12 @@
         padding: 20px 280px;
     }
 
+    @media (max-width: 600px) {
+        section {
+            padding: 20px 20px;
+        }
+    }
+
     h1 {
         color: #9cc032;
     }
