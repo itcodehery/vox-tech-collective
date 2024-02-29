@@ -1,52 +1,52 @@
 <script>
-    import { onMount, afterUpdate, onDestroy } from 'svelte';
+	import { onMount, afterUpdate, onDestroy } from "svelte";
 
-    export let mainText;
-    export let subText;
-    let isMobile = false;
+	export let mainText;
+	export let subText;
+	let isMobile = false;
 
-    function joinUsClick() {
-        window.open('https://tally.so/r/3qRxa5', '_blank');
-    }
+	function joinUsClick() {
+		window.open("https://tally.so/r/3qRxa5", "_blank");
+	}
 
-    function checkScreenWidth() {
-        isMobile = window.innerWidth < 600;
-    }
+	function checkScreenWidth() {
+		isMobile = window.innerWidth < 600;
+	}
 
-    onMount(() => {
-        checkScreenWidth();
+	onMount(() => {
+		checkScreenWidth();
 
-        window.addEventListener('resize', checkScreenWidth);
+		window.addEventListener("resize", checkScreenWidth);
 
-        afterUpdate(() => {
-            checkScreenWidth();
-        });
+		afterUpdate(() => {
+			checkScreenWidth();
+		});
 
-        onDestroy(() => {
-            window.removeEventListener('resize', checkScreenWidth);
-        });
-    });
+		onDestroy(() => {
+			window.removeEventListener("resize", checkScreenWidth);
+		});
+	});
 </script>
 
 <!-- if it's a mobile screen, render this on the screen -->
 {#if isMobile}
-    <div class="main-card">
-        <h1>{mainText}</h1>
-        <p>{subText}</p>
-        <button on:click={joinUsClick}>Join Us</button>
-    </div>
+	<div class="main-card">
+		<h1>{mainText}</h1>
+		<p>{subText}</p>
+		<button on:click={joinUsClick}>Join Us</button>
+	</div>
 {:else}
-    <div class="main-card">
-        <h1>{mainText}</h1>
-        <p>{subText}</p>
-        <button on:click={joinUsClick}>Join Us</button>
-    </div>
+	<div class="main-card">
+		<h1>{mainText}</h1>
+		<p>{subText}</p>
+		<button on:click={joinUsClick}>Join Us</button>
+	</div>
 {/if}
 
 <style>
 	.main-card {
 		background-color: #aed340;
-		background-image: url('../lib/images/primaryCardbg.png');
+		background-image: url("../lib/images/primaryCardbg.png");
 		background-size: cover;
 		color: #111111;
 		align-self: center;
@@ -71,7 +71,7 @@
 			padding: 32px;
 			align-items: center;
 			background-color: #aed340;
-			background-image: url('../lib/images/primaryCardbg.png');
+			background-image: url("../lib/images/primaryCardbg.png");
 			background-size: cover;
 			color: #000;
 			align-self: center;

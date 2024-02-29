@@ -98,6 +98,6 @@
             {/if}
         {/each}
     </div>
-    <p>Made by Hari Prasad B K @ The Vox Technologia Collective.</p>
+    <p>Made by Hari Prasad @ The Vox Technologia Collective.</p>
 </footer>
 
