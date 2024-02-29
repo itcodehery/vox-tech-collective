@@ -7,7 +7,7 @@
 
     function joinUsClick() {
         window.open('https://tally.so/r/meeq4e', '_blank');
-    }
+    };
 </script>
 
 <style>
