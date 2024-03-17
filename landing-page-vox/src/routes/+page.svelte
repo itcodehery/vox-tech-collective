@@ -1,5 +1,8 @@
 <script>
+    import Detailbar from "../components/detailbar.svelte";
+    import { IconVolume } from "@tabler/icons-svelte";
     import logo from "../lib/images/logo.png";
+    import Whatwedo from "../components/whatwedo.svelte";
 
     const routes = [
         { name: "Home", path: "/" },
@@ -36,15 +39,27 @@
         <div class="actualbody">
             <h1 class="side">The Vox</h1>
             <h1>Technologia Collective</h1>
-            <p>vɒks tɛk nəʊ ləʊ ˈʤiːˈaɪ eɪ</p>
+            <div class="row">
+                <IconVolume color="#000" width="14px" height="14px" />
+                <p>vɒks tɛknəʊləʊˈʤiːaɪeɪ</p>
+            </div>
             <p>
-                We are always looking for talented individuals to join our team.
-                If you are interested in working with us, please fill out the
-                form below and we will get back to you as soon as possible.
+                A student-driven community based in Bangalore, In, dedicated to
+                helping college students collaborate on tech-related projects,
+                learn new skills, and network with fellow students.
             </p>
-            <button on:click={joinUsClick} class="mainbutton">
-                <p>Join Us</p>
-            </button>
+            <Detailbar
+                buttonAction=""
+                buttonText="Join Us"
+                subtitle="members in our community. Even more to come."
+                title="23"
+                value="23"
+            />
+            <div class="section-gap" />
+            <Whatwedo
+                categoryTitle="What We Do"
+                title="Things that we do in the community"
+            />
         </div>
     </section>
 </body>
@@ -57,6 +72,18 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .row p {
+        margin: 0;
     }
 
     .appbar {

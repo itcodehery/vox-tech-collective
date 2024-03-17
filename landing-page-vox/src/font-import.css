@@ -62,6 +62,7 @@ body {
     /* soft gradient background*/
     background-image: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
     color: black;
+    height: 100%;
     font-family: 'SFProDisplayRegular', sans-serif;
     margin: 0;
     align-self: center;
