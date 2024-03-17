@@ -60,7 +60,8 @@ E:\D\Coding\Repositories\vox-tech\landing-page-vox\src\fonts\SFPRODISPLAYREGULAR
 
 body {
     /* soft gradient background*/
-    background-image: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+    background-image: url("./lib/images/BG.png");
+    background-size: cover;
     color: black;
     height: 100%;
     font-family: 'SFProDisplayRegular', sans-serif;

@@ -30,7 +30,7 @@
                 <a href="/about">About</a>
             </div>
             <div>
-                <button class="mainbutton">
+                <button class="mainbutton" on:click={joinUsClick}>
                     <p>Join Us</p>
                 </button>
             </div>
@@ -143,6 +143,10 @@
         border: none;
         border-radius: 80px;
         cursor: pointer;
+    }
+
+    .mainbutton:hover {
+        background-color: #000000d7;
     }
 
     .mainbutton p {

@@ -25,6 +25,7 @@
         justify-content: space-between;
         padding: 10px;
         background-color: #00000011;
+        border: 1px solid #00000011;
         border-radius: 10px;
         margin-top: 20px;
         margin-bottom: 20px;
