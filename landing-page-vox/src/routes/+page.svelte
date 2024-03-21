@@ -15,6 +15,36 @@
     function joinUsClick() {
         window.open("https://tally.so/r/3qRxa5", "_blank");
     }
+
+    let expandedItem = null;
+
+    function toggleItem(item) {
+        expandedItem = expandedItem === item ? null : item;
+    }
+
+    const items = {
+        "#1": {
+            id: "#1",
+            icon: "📚",
+            title: "Have Discussions on Tech and its impact on the community",
+            content:
+                "We have discussions on various topics in tech and how it impacts the community. We discuss the latest trends and how we can contribute to the community.",
+        },
+        "#2": {
+            id: "#2",
+            icon: "🛠️",
+            title: "Work on Projects together and build portfolios of each other",
+            content:
+                "We work on projects together and build portfolios of each other. We help each other grow and learn new skills.",
+        },
+        "#3": {
+            id: "#3",
+            icon: "🎉",
+            title: "Have fun and learn together in a safe environment",
+            content:
+                "We have fun and learn together in a safe environment. We make sure that everyone is comfortable and has a good time.",
+        },
+    };
 </script>
 
 <body>
@@ -60,6 +90,35 @@
                 categoryTitle="What We Do"
                 title="Things that we do in the community"
             />
+            <div class="section-gap" />
+            <div class="accordion">
+                {#each Object.values(items) as yoooo}
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-header"
+                            on:click={() => toggleItem(yoooo.id)}
+                        >
+                            <div
+                                style="display: flex; flex-direction: row; gap: 10px;"
+                            >
+                                <p>{yoooo.icon}</p>
+                                <p>{yoooo.title}</p>
+                                {expandedItem === yoooo.id ? "▲" : "▼"}
+                            </div>
+
+                            <div
+                                class="accordion-content"
+                                style={expandedItem === yoooo.id
+                                    ? ""
+                                    : "display: none;"}
+                            >
+                                {yoooo.content}
+                            </div>
+                        </button>
+                    </div>
+                {/each}
+            </div>
+            <div style="height: 100px;" />
         </div>
     </section>
 </body>
@@ -114,6 +173,7 @@
         background-color: rgba(0, 0, 0, 0.122);
         border-radius: 80px;
         gap: 10px;
+        font-family: "SFProDisplayRegular", sans-serif;
     }
 
     .nav a {
@@ -167,6 +227,7 @@
     p {
         font-family: "SFProDisplayRegular", sans-serif;
         font-size: 16px;
+        margin: 0;
     }
     .section-gap {
         height: 100px;
@@ -176,5 +237,53 @@
         display: flex;
         flex-direction: column;
         gap: 0px;
+    }
+
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 500px;
+        color: black;
+    }
+
+    .accordion-item {
+        display: flex;
+        flex-direction: column;
+        font-family: "SFProDisplayRegular", sans-serif;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+
+    .accordion-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        font-family: "SFProDisplayBold", sans-serif;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #ccc;
+        border-radius: 8px 8px 0 0;
+        cursor: pointer;
+    }
+
+    .accordion button {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .accordion-content {
+        border-top: 1px solid #fff;
+        padding: 10px;
+        border-radius: 0 0 8px 8px;
+        transition: ease-in-out 0.2s;
+        font-family: "SFProDisplayRegular", sans-serif;
     }
 </style>

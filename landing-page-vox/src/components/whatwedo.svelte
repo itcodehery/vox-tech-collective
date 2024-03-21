@@ -29,6 +29,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        font-family: "SFProDisplayRegular", sans-serif;
         margin-top: 30px;
     }
 
