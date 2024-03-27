@@ -45,7 +45,7 @@
     }
 
     h1 {
-        font-family: "SFProDisplayBold", sans-serif;
+        font-family: "YoungSerif", sans-serif;
         font-size: 40px;
         margin: 10px;
         max-width: 500px;

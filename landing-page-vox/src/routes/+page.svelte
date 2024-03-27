@@ -91,7 +91,7 @@
             />
             <div class="section-gap" />
             <div class="text">
-                <p>What are we hoping for</p>
+                <p style="color: blue;">What are we hoping for</p>
                 <h1>Aims</h1>
             </div>
             <div class="accordion">
@@ -226,7 +226,7 @@
     }
 
     h1 {
-        font-family: "SFProDisplayBold", sans-serif;
+        font-family: "YoungSerif", sans-serif;
         font-size: 40px;
         margin: 0;
     }

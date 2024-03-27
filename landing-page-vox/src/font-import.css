@@ -58,6 +58,13 @@ E:\D\Coding\Repositories\vox-tech\landing-page-vox\src\fonts\SFPRODISPLAYREGULAR
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('fonts/YoungSerif-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     /* soft gradient background*/
     background-image: url("./lib/images/BG.png");
