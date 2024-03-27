@@ -3,12 +3,12 @@
     import { IconVolume } from "@tabler/icons-svelte";
     import logo from "../lib/images/logo.png";
     import Whatwedo from "../components/whatwedo.svelte";
+    import Contact from "../components/contact.svelte";
 
     const routes = [
-        { name: "Home", path: "/" },
+        { name: "About", path: "/" },
         { name: "Contact", path: "/contact" },
         { name: "Products", path: "/products" },
-        { name: "About", path: "/about" },
         { name: "Join Us", path: "/recruitment-form" },
     ];
 
@@ -54,10 +54,9 @@
                 <img src={logo} alt="logo" width="50px" height="50px" />
             </div>
             <div class="nav">
-                <a href="/">Home</a>
-                <a href="/contact">Contact</a>
-                <a href="/products">Products</a>
-                <a href="/about">About</a>
+                <a href="/">About</a>
+                <a href="/">Contact</a>
+                <a href="/">Products</a>
             </div>
             <div>
                 <button class="mainbutton" on:click={joinUsClick}>
@@ -79,11 +78,11 @@
                 learn new skills, and network with fellow students.
             </p>
             <Detailbar
-                buttonAction=""
                 buttonText="Join Us"
                 subtitle="members in our community. Even more to come."
                 title="23"
                 value="23"
+                buttonAction={joinUsClick}
             />
             <div class="section-gap" />
             <Whatwedo
@@ -91,6 +90,10 @@
                 title="Things that we do in the community"
             />
             <div class="section-gap" />
+            <div class="text">
+                <p>What are we hoping for</p>
+                <h1>Aims</h1>
+            </div>
             <div class="accordion">
                 {#each Object.values(items) as yoooo}
                     <div class="accordion-item">
@@ -98,9 +101,7 @@
                             class="accordion-header"
                             on:click={() => toggleItem(yoooo.id)}
                         >
-                            <div
-                                style="display: flex; flex-direction: row; gap: 10px;"
-                            >
+                            <div class="titleheader">
                                 <p>{yoooo.icon}</p>
                                 <p>{yoooo.title}</p>
                                 {expandedItem === yoooo.id ? "▲" : "▼"}
@@ -118,6 +119,7 @@
                     </div>
                 {/each}
             </div>
+            <Contact />
             <div style="height: 100px;" />
         </div>
     </section>
@@ -155,6 +157,15 @@
         padding-top: 10px;
         padding-bottom: 10px;
         color: #fff;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
     }
 
     .logo {
@@ -253,16 +264,17 @@
 
     .accordion-item {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         font-family: "SFProDisplayRegular", sans-serif;
         background-color: #fff;
         border: 1px solid #ccc;
         border-radius: 8px;
+        width: 100%;
     }
 
     .accordion-header {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
         padding: 10px;
@@ -271,6 +283,16 @@
         border-bottom: 1px solid #ccc;
         border-radius: 8px 8px 0 0;
         cursor: pointer;
+        transition: ease-in-out 0.2s;
+        width: 100%;
+    }
+
+    .titleheader {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .accordion button {
@@ -281,9 +303,12 @@
 
     .accordion-content {
         border-top: 1px solid #fff;
-        padding: 10px;
+        padding: 4px;
+        margin-top: 10px;
+        border: dashed 1px #a8a8a8;
         border-radius: 0 0 8px 8px;
         transition: ease-in-out 0.2s;
+        text-align: left;
         font-family: "SFProDisplayRegular", sans-serif;
     }
 </style>

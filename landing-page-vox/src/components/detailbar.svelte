@@ -64,5 +64,14 @@
         border: none;
         border-radius: 50px;
         cursor: pointer;
+        transition: ease-in-out 0.2s;
+    }
+
+    button:hover {
+        background-color: rgb(0, 0, 0, 0.8);
+    }
+
+    button:active {
+        scale: 0.95;
     }
 </style>

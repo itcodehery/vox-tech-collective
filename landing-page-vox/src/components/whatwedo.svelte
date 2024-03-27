@@ -59,5 +59,10 @@
         margin: 8px;
         border: 1px solid #ccc;
         border-radius: 8px;
+        cursor: cell;
+    }
+
+    .card:hover {
+        background-color: rgba(0, 0, 0, 0.027);
     }
 </style>
