@@ -1,27 +1,71 @@
 <script>
+    import { IconUsers } from "@tabler/icons-svelte";
     let allContacts = {
         "Hari Prasad": {
             role: "Community Manager",
-            email: "haririo321@gmail.com",
+            site: "hariprasad-one.vercel.app",
         },
         "Vaibhav Kumaar": {
             role: "Community Manager",
-            email: "vaibhavmurugendra@gmail.com",
+            site: "www.vaibhavmurugendra.tech/",
+        },
+    };
+
+    function openNewSite(site) {
+        window.open(`https://${site}`, "_blank");
+    }
+
+    let allCurators = {
+        "Tamanna Billuraj": {
+            role: "Curator",
+            email: "tamannabilluraj@gmail.com",
+        },
+        "Prathik Vishnu S": {
+            role: "Curator",
+            email: "prathikvishnu@gmail.com",
+        },
+        "Pranav S": {
+            role: "Curator",
+            email: "pranavs@gmail.com",
+        },
+        Krithik: {
+            role: "Curator",
+            email: "krithik@gmail.com",
         },
     };
 </script>
 
 <div class="globalwrap">
     <div class="row">
-        <h1>Contact</h1>
-        <button>Our Mail</button>
+        <h1>People</h1>
+        <button>Contact Us</button>
     </div>
     <div class="cards">
         {#each Object.entries(allContacts) as [name, contact]}
             <div class="card">
                 <h4>{name}</h4>
-                <p>{contact.role}</p>
-                <a href="mailto:{contact.email}"><p>{contact.email}</p></a>
+                <div style="display: flex; flex-direction: row; gap: 10px;">
+                    <IconUsers color="#000" size="20" fill="black" />
+                    <p>{contact.role}</p>
+                </div>
+                <button on:click={() => openNewSite(contact.site)}
+                    ><p>{contact.site}</p></button
+                >
+            </div>
+        {/each}
+    </div>
+    <div class="cardgrid">
+        {#each Object.entries(allCurators) as [name, contact]}
+            <div class="card">
+                <h4>{name}</h4>
+                <div style="display: flex; flex-direction: row; gap: 10px;">
+                    <IconUsers color="#000" size="20" fill="black" />
+                    <p>{contact.role}</p>
+                </div>
+                <button
+                    ><a href="mailto:{contact.email}"><p>{contact.email}</p></a
+                    ></button
+                >
             </div>
         {/each}
     </div>
@@ -37,7 +81,6 @@
         justify-content: center;
         font-family: "SFProDisplayRegular", sans-serif;
         margin-top: 30px;
-        padding: 30px;
     }
 
     .row {
@@ -52,7 +95,13 @@
 
     .cards {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .cardgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     button {
@@ -100,7 +149,7 @@
         padding: 16px;
         margin: 8px;
         border: 1px solid #ccc;
-        border-radius: 8px;
+        border-radius: 24px;
         cursor: cell;
     }
 
@@ -110,8 +159,9 @@
 
     a {
         text-decoration: none;
-        color: black;
-        padding: 4px;
-        border-radius: 4px;
+        color: white;
+        padding: 0;
+        border-radius: 0px;
+        margin: 0;
     }
 </style>
