@@ -40,7 +40,7 @@
 
     h4 {
         margin: 0;
-        color: rgb(36, 113, 237);
+        color: #838383;
         font-size: small;
     }
 
@@ -64,5 +64,22 @@
 
     .card:hover {
         background-color: rgba(0, 0, 0, 0.027);
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        h4 {
+            font-size: 24px;
+        }
     }
 </style>

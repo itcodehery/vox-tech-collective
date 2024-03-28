@@ -7,7 +7,7 @@
         },
         "Vaibhav Kumaar": {
             role: "Community Manager",
-            site: "www.vaibhavmurugendra.tech/",
+            site: "www.vaibhavmurugendra.tech",
         },
     };
 
@@ -22,23 +22,23 @@
         },
         "Prathik Vishnu S": {
             role: "Curator",
-            email: "prathikvishnu@gmail.com",
+            email: "prathik.pvs03@gmail.com",
         },
         "Pranav S": {
             role: "Curator",
-            email: "pranavs@gmail.com",
+            email: "panu.5631@gmail.com",
         },
-        Krithik: {
+        "Krithik M": {
             role: "Curator",
-            email: "krithik@gmail.com",
+            email: "krithikm923@gmail.com",
         },
     };
 </script>
 
 <div class="globalwrap">
     <div class="row">
-        <h1>People</h1>
-        <button>Contact Us</button>
+        <h1>Community Managers</h1>
+        <button class="contactbutt">Contact Us</button>
     </div>
     <div class="cards">
         {#each Object.entries(allContacts) as [name, contact]}
@@ -53,6 +53,10 @@
                 >
             </div>
         {/each}
+    </div>
+    <div class="row">
+        <h1>Community Curators</h1>
+        <button class="contactbutt">Contact Us</button>
     </div>
     <div class="cardgrid">
         {#each Object.entries(allCurators) as [name, contact]}
@@ -91,6 +95,8 @@
         justify-content: space-between;
         gap: 10px;
         margin-top: 10px;
+        padding-top: 30px;
+        padding-bottom: 10px;
     }
 
     .cards {
@@ -163,5 +169,44 @@
         padding: 0;
         border-radius: 0px;
         margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .row {
+            flex-direction: column;
+        }
+
+        .cards {
+            flex-direction: column;
+            place-items: center;
+        }
+
+        .cardgrid {
+            grid-template-columns: 1fr;
+            place-items: center;
+        }
+
+        h4 {
+            font-size: 24px;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .contactbutt {
+            display: none;
+        }
     }
 </style>

@@ -53,7 +53,7 @@
     p {
         margin: 0;
         font-size: 14px;
-        color: rgba(0, 0, 0, 0.419);
+        color: rgba(0, 0, 0, 0.582);
     }
 
     button {
@@ -73,5 +73,33 @@
 
     button:active {
         scale: 0.95;
+    }
+
+    @media (max-width: 768px) {
+        .bar {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .icon {
+            align-self: center;
+            margin-right: 0;
+        }
+
+        .content {
+            margin-left: 10px;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        /* p {
+            max-width: 300px;
+        } */
+
+        button {
+            display: none;
+        }
     }
 </style>

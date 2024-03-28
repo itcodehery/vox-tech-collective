@@ -1,0 +1,92 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.appbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.122);
+    border-radius: 80px;
+    gap: 10px;
+    font-family: "SFProDisplayRegular", sans-serif;
+}
+
+.nav a {
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 80px;
+    padding: 10px;
+    transition: ease-in 0.2s;
+}
+
+.nav a:hover {
+    background-color: #0000003f;
+}
+
+.mainbutton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    padding: 10px;
+    margin-right: 10px;
+    max-height: 40px;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+}
+
+.mainbutton:hover {
+    background-color: #000000d7;
+}
+
+.mainbutton p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer-border {
+    background-image: url('../lib/images/footer-border.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 20px;
+}
